@@ -1,29 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <a href="index.html">HOME</a>
-    <a href="about.html">ABOUT US</a>
-    <a href="contact.html">CONTACT US</a>
-    <a href="news.html">NEWS</a>
-    <a href="product.html">PRODUCT</a>
     
-    <img src="_images/Senior tech.jpg">
-    <h1>SENIOR TECHNOLOGY IT SERVICES</h1>
-    <p>Transforming Innovation Into Success</p>
+    <!-- SEO Meta Tags -->
+    <title>Senior Technology Services - Transforming Innovation into Success</title>
+    <meta name="description" content="Senior Technology Services offers tailored IT solutions to empower senior citizens with innovative technology. Contact us to transform your digital needs into success.">
+    <meta name="keywords" content="Senior Technology Services, IT for seniors, senior tech, digital literacy for seniors, tech services for seniors, Umlazi tech support">
+    <meta name="author" content="Senior Technology Services">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles.css">
 
-    <p>Email: seniortechservices@gmail.com <br>Address: R134 Mlungu Gumede, Umlazi 4031</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.49342178818!2d30.877927180840274!3d-29.96151061084574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef653512b85e865%3A0xbbb2ba9dbaa26ada!2sMlungu%20Gumede%20Rd%2C%20Umlazi%20R%2C%20Umlazi%2C%204066%2C%20South%20Africa!5e0!3m2!1sen!2snl!4v1723716907027!5m2!1sen!2snl" 
-    width="301" height="350" style="border:20px;" allowfullscreen="" loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- JavaScript -->
+    <script>
+        function clearForm() {
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('enquiry').selectedIndex = 0;
+            document.getElementById('message').value = '';
+        }
 
-    <div class="footer">
+        function validateForm(event) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert("Please fill in all required fields.");
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation Links -->
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="news.html">NEWS</a>
+        <a href="product.html">PRODUCT</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <img src="_images/Senior-tech.jpg" alt="Senior Technology Services Logo">
+        <h1>Senior Technology IT Services</h1>
+        <p>Transforming Innovation Into Success</p>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <p>Email: <a href="mailto:seniortechservices@gmail.com">seniortechservices@gmail.com</a><br>
+            Address: R134 Mlungu Gumede, Umlazi 4031</p>
+        </section>
+
+        <!-- Map Embedding with Descriptive Alt -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13826.49342178818!2d30.877927180840274!3d-29.96151061084574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef653512b85e865%3A0xbbb2ba9dbaa26ada!2sMlungu%20Gumede%20Rd%2C%20Umlazi%20R%2C%20Umlazi%2C%204066%2C%20South%20Africa!5e0!3m2!1sen!2snl!4v1723716907027!5m2!1sen!2snl" 
+        width="301" height="350" style="border:20px;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" aria-label="Map location of Senior Technology Services in Umlazi, South Africa"></iframe>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="mailto:seniortechservices@gmail.com" method="post" enctype="text/plain" onsubmit="validateForm(event)">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+
+                <label for="enquiry">Enquiry Type:</label><br>
+                <select id="enquiry" name="enquiry">
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Tech Support</option>
+                    <option value="training">Training Information</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea><br><br>
+
+                <button type="submit">Submit</button>
+                <button type="button" onclick="clearForm()">Clear</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer with Copyright -->
+    <footer class="footer">
         <p>&copy; 2024 - Senior Technology Services</p>
-    </div>
+    </footer>
 </body>
+
 </html>
+

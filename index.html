@@ -4,34 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Technology Services</title>
+    <meta name="description" content="Senior Technology Services provides cutting-edge technology solutions tailored for senior citizens. We empower seniors with easy-to-use technology, enabling them to stay connected and independent.">
+    <meta name="keywords" content="Senior Technology Services, technology for seniors, senior digital literacy, tech support for seniors, senior independence, empowering seniors with technology">
+    <meta name="author" content="Senior Technology Services">
+    <title>Senior Technology Services - Empowering Seniors Through Technology</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header">
-        <img src="_images/Senior tech.jpg" alt="Logo" height="100px" />
-    </div>
-    <div class="subheading">
+    <!-- Header Section with Logo and Alt Text for Accessibility -->
+    <header class="header">
+        <img src="_images/Senior-tech.jpg" alt="Senior Technology Services Logo" height="100px" />
+    </header>
+    
+    <!-- Main Heading and Subheading with Keywords -->
+    <section class="subheading">
         <h1>Senior Technology Services</h1>
-        <h3>Empowering Innovations With Cutting Edge Technology Solutions!</h3>
-    </div>
-    <div class="menu">
-        <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a
-            href="product.html">Our Products</a> | <a href="news.html">News</a>
-    </div>
-    </div>
-    <div class="main" <p>Welcome to Senior Technology IT services where we drive progress through advanced technolgy
-        solutions. As a leader in Senior Technology services, we specialise in delivering tailored solutions that meet
-        unique needs of businesses across various industries. Our expert team is dedicated to harnessing the latest
-        innovations to enhance your operations, streamline processes, and achieve your strategic goals. Discover how our
-        commitment to excellence can tranform your technology landscape and propel your bussiness forward. Explore our
-        services and let us partner with you on your journey to success.</p>
-        <img src="_images/cover.jpg" height="300px">
-    </div>
-    <div class="footer">
-        <p>&copy; 2024 - Senior Technology Services</p>
-    </div>
+        <h3>Empowering Innovations With Cutting-Edge Technology Solutions for Seniors</h3>
+    </section>
+    
+    <!-- Navigation Menu with Descriptive Links -->
+    <nav class="menu">
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Us</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        <a href="product.html">Our Products</a> | 
+        <a href="news.html">News</a>
+    </nav>
+
+    <!-- Main Content Section with Relevant Keywords and Image Alt Text -->
+    <main class="main">
+        <p>Welcome to Senior Technology Services, where we drive progress through advanced technology solutions designed for senior citizens. As a leader in senior technology services, we specialize in delivering easy-to-use, accessible solutions that meet the unique needs of older adults. Our expert team is dedicated to harnessing the latest innovations to enhance senior independence, improve connectivity, and provide support with confidence. Discover how our commitment to excellence can transform the lives of seniors by bridging the digital divide. Explore our services, and let us partner with you on your journey to success.</p>
+        <img src="_images/cover.jpg" alt="Senior using technology for independence" height="300px">
+    </main>
+
+    <!-- Footer with Timestamp Script and Newsletter Section -->
+    <footer class="footer">
+        <p>&copy; 2024 - Senior Technology Services | <span id="timestamp"></span></p>
+        
+        <!-- Newsletter Subscription Section -->
+        <section class="newsletter">
+            <h3>Receive Our Newsletter</h3>
+            <p>Stay up to date with our latest news and updates. Subscribe to our weekly newsletter by entering your email below:</p>
+            
+            <!-- Embed Provided Google Form for Newsletter Subscription -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgG_d1P1SBSckAFa5l-BZagWLv2-5QlFz5UisrjSozO8mzKQ/viewform?embedded=true" 
+                width="640" height="366" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </section>
+    </footer>
+
+    <!-- JavaScript to add Timestamp in Footer -->
+    <script>
+        const timestampElement = document.getElementById("timestamp");
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            second: "numeric"
+        });
+        timestampElement.textContent = `Last updated: ${formattedDate}`;
+    </script>
 </body>
 
 </html>
